@@ -1,0 +1,39 @@
+%p#notice= notice
+
+%p
+  %b Sex:
+  = @contact.sex
+%p
+  %b First name:
+  = @contact.first_name
+%p
+  %b Last name:
+  = @contact.last_name
+%p
+  %b Company:
+  = @contact.company
+%p
+  %b Email:
+  = @contact.email
+%p
+  %b Is broker:
+  = @contact.is_broker
+%p
+  %b Is charterer:
+  = @contact.is_charterer
+%p
+  %b Is owner:
+  = @contact.is_owner
+%p
+  %b Region:
+  = @contact.region
+%p
+  %b Size:
+  = @contact.size
+%p
+  %b Comment:
+  = @contact.comment
+
+= link_to 'Edit', edit_contact_path(@contact)
+\|
+= link_to 'Back', contacts_path
