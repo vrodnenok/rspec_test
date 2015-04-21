@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'devise'
+gem 'execjs'
+gem 'therubyracer'
+gem 'foundation-rails'
 
 group :development, :test do
   gem 'rspec-rails', '>= 3.0'
