@@ -1,0 +1,15 @@
+.row
+  .large-5.columns
+    %h2 Sign up form:
+.row
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = devise_error_messages!
+    = f.text_field :first_name, placeholder: "First name"
+    = f.text_field :last_name, label_html:{class:'left'}
+    = f.text_field :role, label_html:{class:'left'}
+    = f.text_field :dept, label_html:{class:'left'}
+    = f.email_field :email, autofocus: true, label_html:{class:'left'}
+    = f.password_field :password, autocomplete: "off", label_html:{class:'left'}
+    = f.password_field :password_confirmation, autocomplete: "off", label_html:{class:'left'}
+    = f.submit "Register", class: 'button tiny'
+  = render "devise/shared/links"

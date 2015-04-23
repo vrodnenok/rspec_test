@@ -4,6 +4,8 @@ gem 'devise'
 gem 'execjs'
 gem 'therubyracer'
 gem 'foundation-rails'
+gem 'haml-rails'
+gem 'simple_form'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -38,7 +40,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   gem 'rspec-rails', '>= 3.0'
-  gem 'haml-rails'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
 
