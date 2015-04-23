@@ -4,9 +4,6 @@ class UsersController < Devise::RegistrationsController
 
   before_filter :require_permitted_parameters
 
-  def new
-  end
-
   protected
 
   def configure_permitted_parameters
