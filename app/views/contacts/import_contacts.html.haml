@@ -1,0 +1,12 @@
+%h2 Simple form for import contacts:
+
+=simple_form_for (@import), url: '/import' do |f|
+  =f.text_area :contacts_to_import, rows:'25'
+  =f.input :is_broker, as: :boolean 
+  =f.input :is_owner, as: :boolean
+  =f.input :is_charterer, as: :boolean
+  =f.input :region, priority: ['Russia'], collection: ['America', 'Russia']
+  =f.input :size, collection:[1000, 5000, 10000, 50000]
+  .action
+  =f.submit
+  

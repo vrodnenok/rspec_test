@@ -1,6 +1,25 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
 
+  # PUST /contacts, will return filtered table in editable form
+  def filter_table
+    puts params[:fltr]
+    render :json => 'Ok'
+  end
+
+  def import_contacts
+    @import = Import.new()
+  end
+
+  def do_import
+    txt = params[:import][:contacts_to_import]
+    txt.each_line do |l|
+      puts l
+    end
+    @contacts = Contact.all
+    render 'index'
+  end
+
   # GET /contacts
   # GET /contacts.json
   def index
@@ -69,6 +88,8 @@ class ContactsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contact_params
-      params.require(:contact).permit(:sex, :first_name, :last_name, :company, :email, :is_broker, :is_charterer, :is_owner, :region, :size, :comment)
+      params.require(:contact).permit(:sex, :first_name, :last_name, 
+        :company, :email, :is_broker, :is_charterer, :is_owner, :enabled,
+        :region, :size, :comment)
     end
 end

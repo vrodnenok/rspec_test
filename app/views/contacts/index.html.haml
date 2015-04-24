@@ -1,5 +1,9 @@
 %h1 Listing contacts
 
+Filter: 
+%input#filter
+%br
+%br
 %table
   %thead
     %tr
@@ -13,7 +17,7 @@
       %th Is owner
       %th Region
       %th Size
-      %th Comment
+      %th Enabled
       %th
       %th
       %th
@@ -31,7 +35,7 @@
         %td= contact.is_owner
         %td= contact.region
         %td= contact.size
-        %td= contact.comment
+        %td= contact.enabled
         %td= link_to 'Show', contact
         %td= link_to 'Edit', edit_contact_path(contact)
         %td= link_to 'Destroy', contact, :method => :delete, :data => { :confirm => 'Are you sure?' }

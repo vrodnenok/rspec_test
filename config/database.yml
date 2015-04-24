@@ -15,13 +15,14 @@
 # gem 'pg'
 #
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
   encoding: unicode
+  host: localhost
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
-  #user: root
-  #password: 8102977aa
+  user: vic
+  password: 8102977aa
   #socket: /tmp/mysql.sock
 
 development:
