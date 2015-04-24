@@ -7,9 +7,10 @@ $ ->
 
 get_table = () ->
   console.log($(this).val())
-  $.ajax(
+  $.ajax
     url: '/ajax'
     method: 'POST'
-    data: {fltr: $(this).val()}).done = (data)->
-      console.log('returned'+data)
-    return
+    data: {fltr: $(this).val()}
+    success: (data) ->
+      $('#contacts_table').html data
+      console.log data  

@@ -4,41 +4,42 @@ Filter:
 %input#filter
 %br
 %br
-%table
-  %thead
-    %tr
-      %th Sex
-      %th First name
-      %th Last name
-      %th Company
-      %th Email
-      %th Is broker
-      %th Is charterer
-      %th Is owner
-      %th Region
-      %th Size
-      %th Enabled
-      %th
-      %th
-      %th
-
-  %tbody
-    - @contacts.each do |contact|
+#contacts_table
+  %table
+    %thead
       %tr
-        %td= contact.sex
-        %td= contact.first_name
-        %td= contact.last_name
-        %td= contact.company
-        %td= contact.email
-        %td= contact.is_broker
-        %td= contact.is_charterer
-        %td= contact.is_owner
-        %td= contact.region
-        %td= contact.size
-        %td= contact.enabled
-        %td= link_to 'Show', contact
-        %td= link_to 'Edit', edit_contact_path(contact)
-        %td= link_to 'Destroy', contact, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %th Sex
+        %th First name
+        %th Last name
+        %th Company
+        %th Email
+        %th Is broker
+        %th Is charterer
+        %th Is owner
+        %th Region
+        %th Size
+        %th Enabled
+        %th
+        %th
+        %th
+
+    %tbody
+      - @contacts.each do |contact|
+        %tr
+          %td= contact.sex
+          %td= contact.first_name
+          %td= contact.last_name
+          %td= contact.company
+          %td= contact.email
+          %td= contact.is_broker
+          %td= contact.is_charterer
+          %td= contact.is_owner
+          %td= contact.region
+          %td= contact.size
+          %td= contact.enabled
+          %td= link_to 'Show', contact
+          %td= link_to 'Edit', edit_contact_path(contact)
+          %td= link_to 'Destroy', contact, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
