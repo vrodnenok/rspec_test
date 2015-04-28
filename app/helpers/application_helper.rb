@@ -11,8 +11,4 @@ module ApplicationHelper
     @devise_mapping ||= Devise.mappings[:user]
   end
 
-  def full_name
-    current_user.first_name + " " + current_user.last_name
-  end
-
 end

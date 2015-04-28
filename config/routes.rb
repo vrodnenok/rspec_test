@@ -8,11 +8,15 @@ Rails.application.routes.draw do
 
   root 'contacts#index'
 
+  get '/send_mail' => 'contacts#send_mail'
+
   post '/ajax' => 'contacts#filter_table'
 
   get '/import' => 'contacts#import_contacts'
 
   post '/import' => 'contacts#do_import'
+
+  post '/upd_cont' => 'contacts#upd_contact'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

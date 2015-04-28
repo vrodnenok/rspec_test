@@ -12,6 +12,14 @@
  *
  *= require_tree .
  *= require_self
- *= require foundation_and_overrides
 
  */
+
+ body {
+  padding: 50px 0 30px;
+ }
+
+ td {
+  text-align: center;
+  vertical-align: middle;
+ }
